@@ -134,7 +134,24 @@
         /* 1. Personal Statement / Hero Section */
         #hero {
             text-align: center;
-            padding: 6rem 0 3rem;
+            padding: 4rem 0 3rem;
+        }
+
+        /* Headshot Image Styling */
+        .profile-img-container {
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold-primary);
+            box-shadow: 0 0 25px var(--gold-glow);
+            background-color: var(--bg-card);
         }
 
         .hero-badge {
@@ -423,7 +440,13 @@
         <!-- 1. PERSONAL STATEMENT SECTION -->
         <section id="about">
             <div id="hero">
-                <div class="hero-badge">Personal Portfolio</div>
+                <!-- Headshot Image Placeholder -->
+                <div class="profile-img-container">
+                    <img src="headshot.jpg" alt="Hasna's Headshot" class="profile-img" onerror="this.src='https://via.placeholder.com/150/12241B/D4AF37?text=Headshot'">
+                </div>
+                <div>
+                    <div class="hero-badge">Personal Portfolio</div>
+                </div>
                 <h1 class="hero-name">Hello, I'm Hasna 👋</h1>
                 <!-- REQUIRED: One clear, impactful professional sentence -->
                 <p class="personal-statement">
@@ -478,7 +501,7 @@
                     <div class="project-details">
                         <ul>
                             <li><strong>The Challenge:</strong> Improving donation intake, sorting, and warehouse processing speed.</li>
-                            <li><strong>Your Approach:</strong> Redesigned the sorting workflow and utilized Excel to support streamlined warehouse operations.</li>
+                            <li><strong>Approach:</strong> Redesigned the sorting workflow and utilized Excel to support streamlined warehouse operations.</li>
                         </ul>
                         <div class="project-results">
                             <strong>Key Results:</strong> Increased weekly box throughput by <strong>21%</strong> and reduced sorting errors by <strong>12%</strong> through structured volunteer task delegation.
@@ -530,15 +553,15 @@
                             <tbody>
                                 <tr>
                                     <td>#BX-1042</td>
-                                    <td>Medical Supplies</td>
-                                    <td>45 units</td>
+                                    <td>Women's shirts</td>
+                                    <td>45 pieces</td>
                                     <td class="status-verified">Manifest Verified</td>
                                     <td>Ready for Ship</td>
                                 </tr>
                                 <tr>
                                     <td>#BX-1043</td>
-                                    <td>Emergency Kits</td>
-                                    <td>120 units</td>
+                                    <td>School supplies</td>
+                                    <td>120 pieces</td>
                                     <td class="status-verified">BOL Attached</td>
                                     <td>In Transit</td>
                                 </tr>
