@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | [Your Name]</title>
+    <title>My Portfolio | Hasna</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -123,6 +123,14 @@
             margin-top: 10px;
         }
 
+        .subsection-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            margin-bottom: 1.2rem;
+            margin-top: 1rem;
+        }
+
         /* 1. Personal Statement / Hero Section */
         #hero {
             text-align: center;
@@ -161,20 +169,24 @@
         }
 
         .personal-statement span {
-            color: var(--text-white);
+            color: var(--gold-light);
             font-weight: 600;
         }
 
         /* 2. Skills Section */
+        .skills-group {
+            margin-bottom: 2.5rem;
+        }
+
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
         }
 
         .skill-card {
             background: var(--bg-card);
-            padding: 1.1rem 1rem;
+            padding: 1.2rem 1rem;
             border-radius: var(--radius);
             text-align: center;
             font-weight: 600;
@@ -292,7 +304,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">[Your Name]<span>.</span></div>
+                <div class="logo">Hasna<span>.</span></div>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -308,10 +320,10 @@
         <section id="about">
             <div id="hero">
                 <div class="hero-badge">Personal Portfolio</div>
-                <h1 class="hero-name">Hello, I'm [Your Name]</h1>
+                <h1 class="hero-name">Hello, I'm Hasna 👋</h1>
                 <!-- REQUIRED: One clear, impactful professional sentence -->
                 <p class="personal-statement">
-                    An aspiring <span>software developer</span> dedicated to crafting clean, high-performance web solutions and turning complex software challenges into elegant user experiences.
+                    Supply Chain Management student at Rutgers Business School with experience in <span>data analysis</span>, <span>process improvement</span>, and <span>operational strategy</span>, passionate about building more efficient and effective supply chains.
                 </p>
             </div>
         </section>
@@ -319,14 +331,32 @@
         <!-- 2. SKILLS SECTION -->
         <section id="skills">
             <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <!-- Highlighted list of technical/professional skills -->
-                <div class="skill-card">HTML5 & CSS3</div>
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">Git & GitHub</div>
-                <div class="skill-card">Python</div>
-                <div class="skill-card">Responsive Design</div>
-                <div class="skill-card">UI/UX Fundamentals</div>
+
+            <!-- Technical Skills -->
+            <div class="skills-group">
+                <h3 class="subsection-title">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">Microsoft Excel</div>
+                    <div class="skill-card">PivotTables</div>
+                    <div class="skill-card">Data Analysis</div>
+                    <div class="skill-card">Microsoft Office 365</div>
+                    <div class="skill-card">Google Workspace</div>
+                </div>
+            </div>
+
+            <!-- Professional Skills -->
+            <div class="skills-group">
+                <h3 class="subsection-title">Professional Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">Inventory Management</div>
+                    <div class="skill-card">Project Management</div>
+                    <div class="skill-card">Strategic Sourcing</div>
+                    <div class="skill-card">Process Improvement</div>
+                    <div class="skill-card">Operational Logistics</div>
+                    <div class="skill-card">Data Tracking & Reporting</div>
+                    <div class="skill-card">Team Leadership</div>
+                    <div class="skill-card">Cross-functional Collaboration</div>
+                </div>
             </div>
         </section>
 
@@ -340,7 +370,7 @@
                     <div>
                         <h3 class="project-title">Portfolio Website</h3>
                         <p class="project-desc">
-                            A personal digital business card built and hosted using GitHub Pages to highlight modern development skills, showcase personal projects, and connect with potential employers.
+                            A personal digital business card built and hosted using GitHub Pages to highlight professional skills, showcase supply chain and technical projects, and connect with prospective employers.
                         </p>
                     </div>
                     <div class="project-links">
@@ -352,9 +382,9 @@
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div>
-                        <h3 class="project-title">Task Tracker Web App</h3>
+                        <h3 class="project-title">Supply Chain Process Optimization</h3>
                         <p class="project-desc">
-                            An interactive task management tool allowing users to create, filter, and organize daily goals with real-time browser storage persistence.
+                            An analytical case study mapping logistics workflows and applying process improvement methods to reduce bottleneck delays and operational costs.
                         </p>
                     </div>
                     <div class="project-links">
@@ -366,9 +396,9 @@
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div>
-                        <h3 class="project-title">Data Visualization Tool</h3>
+                        <h3 class="project-title">Data Analytics Dashboard</h3>
                         <p class="project-desc">
-                            A Python-powered dashboard that processes raw data files to render insightful key metrics and custom chart displays.
+                            A data dashboard project analyzing inventory flow and operational performance metrics to support strategic decision-making.
                         </p>
                     </div>
                     <div class="project-links">
@@ -381,10 +411,4 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 <span>[Your Name]</span>. Created for GitHub Pages Submission.</p>
-    </footer>
-
-</body>
-</html>
+    <!--
