@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | [Your Name]</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern Reset & Forest Green + Gold Color Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Forest Green Base Colors */
+            --bg-dark: #0A1610;        /* Deep Forest Green */
+            --bg-card: #12241B;        /* Slightly lighter card background */
+            --bg-card-hover: #193326;  /* Elevated green on hover */
+            --border-color: #1F3D2E;   /* Muted green border */
+            
+            /* Gold Accents */
+            --gold-primary: #D4AF37;   /* Classic Gold */
+            --gold-light: #F3E5AB;     /* Soft Gold */
+            --gold-glow: rgba(212, 175, 55, 0.25);
+
+            /* Typography Colors */
+            --text-white: #FFFFFF;     /* Bright White for main headings */
+            --text-muted: #A3B8AD;     /* Soft sage/silver green for body copy */
+            
+            --radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            --shadow-gold: 0 6px 20px rgba(212, 175, 55, 0.15);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-muted);
+            line-height: 1.6;
+            padding-bottom: 3rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navigation Header */
+        header {
+            background-color: rgba(10, 22, 16, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-white);
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--gold-primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* Section Layouts */
+        section {
+            padding: 4.5rem 0;
+        }
+
+        .section-title {
+            font-size: 1.85rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--text-white);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 45px;
+            height: 3.5px;
+            background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
+            border-radius: 2px;
+            margin-top: 10px;
+        }
+
+        /* 1. Personal Statement / Hero Section */
+        #hero {
+            text-align: center;
+            padding: 6rem 0 3rem;
+        }
+
+        .hero
