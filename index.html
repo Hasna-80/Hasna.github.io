@@ -206,209 +206,186 @@
 
         /* 3. Projects Section */
         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
         }
 
         .project-card {
             background: var(--bg-card);
             border-radius: var(--radius);
-            padding: 1.8rem;
+            padding: 2rem;
             box-shadow: var(--shadow);
             border: 1px solid var(--border-color);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             transition: all 0.25s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
             border-color: rgba(212, 175, 55, 0.4);
             box-shadow: var(--shadow-gold);
         }
 
-        .project-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-            color: var(--text-white);
-        }
-
-        .project-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .project-links {
+        .project-header {
             display: flex;
-            gap: 1rem;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--gold-primary), #B38F2D);
-            color: var(--bg-dark);
-            border: none;
-        }
-
-        .btn-primary:hover {
-            opacity: 0.95;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn-outline {
-            border: 1px solid var(--border-color);
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 700;
             color: var(--text-white);
-            background: transparent;
         }
 
-        .btn-outline:hover {
-            border-color: var(--gold-primary);
+        .project-tag {
+            background-color: rgba(212, 175, 55, 0.12);
             color: var(--gold-primary);
-            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .project-details {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-details ul {
+            list-style: none;
+            margin-top: 0.75rem;
+        }
+
+        .project-details li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .project-details li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--gold-primary);
+        }
+
+        .project-results {
+            background-color: rgba(10, 22, 16, 0.6);
+            border-left: 3px solid var(--gold-primary);
+            padding: 0.75rem 1rem;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin-top: 1rem;
+            font-size: 0.92rem;
+            color: var(--text-white);
+        }
+
+        /* Embedded Visual Mockups */
+        .visual-container {
+            background-color: #0A140F;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .visual-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        /* Diagram 1: Workflow */
+        .workflow-diagram {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .workflow-step {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.6rem 0.8rem;
+            text-align: center;
+            min-width: 100px;
+            font-size: 0.8rem;
+            color: var(--text-white);
+        }
+
+        .workflow-arrow {
+            color: var(--gold-primary);
+            font-weight: bold;
+        }
+
+        /* Table 2: Excel Visual */
+        .excel-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .excel-table th {
+            background-color: var(--bg-card);
+            color: var(--gold-light);
+            text-align: left;
+            padding: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .excel-table td {
+            padding: 0.5rem;
+            border-bottom: 1px solid rgba(31, 61, 46, 0.5);
+        }
+
+        .status-verified {
+            color: #4ADE80;
+            font-weight: 600;
+        }
+
+        /* Board 3: Trello Board Visual */
+        .trello-board {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .trello-col {
+            background-color: var(--bg-card);
+            padding: 0.6rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .trello-col-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.25rem;
+        }
+
+        .trello-card {
+            background-color: #0A1610;
+            padding: 0.4rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            color: var(--text-white);
+            margin-bottom: 0.4rem;
+            border-left: 2px solid var(--gold-primary);
         }
 
         /* Footer */
-        footer {
-            text-align: center;
-            padding: 2.5rem 0 1rem;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border-color);
-            margin-top: 4rem;
-        }
-
-        footer span {
-            color: var(--gold-primary);
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Navigation Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Hasna<span>.</span></div>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container">
-
-        <!-- 1. PERSONAL STATEMENT SECTION -->
-        <section id="about">
-            <div id="hero">
-                <div class="hero-badge">Personal Portfolio</div>
-                <h1 class="hero-name">Hello, I'm Hasna 👋</h1>
-                <!-- REQUIRED: One clear, impactful professional sentence -->
-                <p class="personal-statement">
-                    Supply Chain Management student at Rutgers Business School with experience in <span>data analysis</span>, <span>process improvement</span>, and <span>operational strategy</span>, passionate about building more efficient and effective supply chains.
-                </p>
-            </div>
-        </section>
-
-        <!-- 2. SKILLS SECTION -->
-        <section id="skills">
-            <h2 class="section-title">Skills</h2>
-
-            <!-- Technical Skills -->
-            <div class="skills-group">
-                <h3 class="subsection-title">Technical Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">Microsoft Excel</div>
-                    <div class="skill-card">PivotTables</div>
-                    <div class="skill-card">Data Analysis</div>
-                    <div class="skill-card">Microsoft Office 365</div>
-                    <div class="skill-card">Google Workspace</div>
-                </div>
-            </div>
-
-            <!-- Professional Skills -->
-            <div class="skills-group">
-                <h3 class="subsection-title">Professional Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">Inventory Management</div>
-                    <div class="skill-card">Project Management</div>
-                    <div class="skill-card">Strategic Sourcing</div>
-                    <div class="skill-card">Process Improvement</div>
-                    <div class="skill-card">Operational Logistics</div>
-                    <div class="skill-card">Data Tracking & Reporting</div>
-                    <div class="skill-card">Team Leadership</div>
-                    <div class="skill-card">Cross-functional Collaboration</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. PROJECTS SECTION -->
-        <section id="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div>
-                        <h3 class="project-title">Portfolio Website</h3>
-                        <p class="project-desc">
-                            A personal digital business card built and hosted using GitHub Pages to highlight professional skills, showcase supply chain and technical projects, and connect with prospective employers.
-                        </p>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-primary">Live Demo</a>
-                        <a href="#" class="btn btn-outline">GitHub Code</a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div>
-                        <h3 class="project-title">Supply Chain Process Optimization</h3>
-                        <p class="project-desc">
-                            An analytical case study mapping logistics workflows and applying process improvement methods to reduce bottleneck delays and operational costs.
-                        </p>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-primary">Live Demo</a>
-                        <a href="#" class="btn btn-outline">GitHub Code</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div>
-                        <h3 class="project-title">Data Analytics Dashboard</h3>
-                        <p class="project-desc">
-                            A data dashboard project analyzing inventory flow and operational performance metrics to support strategic decision-making.
-                        </p>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-outline">GitHub Code</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!--
+        footer
